@@ -1,0 +1,162 @@
+/* arXiv Paper Assistant Styles */
+
+#arxiv-assistant-btn {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#arxiv-assistant-btn:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important;
+}
+
+#arxiv-assistant-btn:active {
+  transform: scale(0.95) !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Widget animations */
+#arxiv-chat-widget, #arxiv-abstract-widget {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for typing indicator */
+@keyframes pulse {
+  0%, 60%, 100% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+/* Hover effects */
+#close-chat:hover, #minimize-widget:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+#send-button:hover {
+  background: #1d4ed8 !important;
+  transform: scale(1.05);
+}
+
+#export-bibtex:hover {
+  background: #047857 !important;
+}
+
+#chat-input:focus, #tag-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Tag styles */
+#tags-container > span {
+  transition: all 0.2s;
+  animation: fadeIn 0.3s ease-out;
+}
+
+#tags-container > span:hover {
+  background: #c7d2fe !important;
+  transform: scale(1.05);
+}
+
+/* Button styles */
+#arxiv-assistant-btn {
+  transition: all 0.3s ease !important;
+}
+
+#arxiv-assistant-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* Message animations */
+.chat-messages > div {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Abstract widget specific styles */
+#arxiv-abstract-widget .actions a:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Tab hover effects */
+#arxiv-abstract-widget .tab-button:hover:not(.active) {
+  background: #f3f4f6 !important;
+  color: #4f46e5 !important;
+}
+
+/* Scrollbar for collections */
+#arxiv-abstract-widget #papers-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#arxiv-abstract-widget #papers-list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+#arxiv-abstract-widget #papers-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+#arxiv-abstract-widget #papers-list::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* BibTeX tooltip */
+.actions div[style*="position: absolute"] {
+  animation: fadeInDown 0.2s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
